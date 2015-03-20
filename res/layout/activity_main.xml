@@ -1,0 +1,304 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_top"
+    tools:context="com.example.greatchallenge.MainActivity" >
+    
+    <!-- TOP -->
+	<LinearLayout
+	    android:id="@+id/top"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	 >
+	 
+	    <TextView 
+	        android:id="@+id/page_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+		    android:textSize="35sp"
+		    android:text="@string/choose_the_teams"
+		    android:gravity="center_horizontal"
+		    android:textColor="@color/color_title"
+		    android:layout_marginTop="5dp"
+		/>
+	    
+	    <LinearLayout
+	        android:id="@+id/top_bar"
+	        android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="20dp"
+		    android:background="@drawable/gradient_bar"
+		    android:layout_marginTop="10dp"
+		/>
+	    
+	</LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:padding="2dp">
+	    
+			<LinearLayout
+			    android:id="@+id/player_content"
+			    android:layout_width="0dip" 
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:paddingLeft="7dp"
+			    android:layout_weight=".5">
+			    
+			    	<ImageButton
+				        android:id="@+id/arrow_player_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_left"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+			        
+				    <LinearLayout
+				        android:id="@+id/linear_player_choise"
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:orientation="vertical">
+				    
+				        <TextView 
+					        android:id="@+id/txt_player"
+					        android:layout_width="wrap_content"
+					        android:layout_height="match_parent"
+						    android:textSize="20sp"
+						    android:text="@string/player"
+						    android:layout_gravity="center"
+						    android:textColor="@color/color_title"
+						    android:layout_marginTop="5dp"/>
+				        
+					    <android.support.v4.view.ViewPager
+					        android:id="@+id/pagerPlayer1"
+					        android:layout_width="250dp"
+					        android:layout_height="80dp"
+					        android:padding="20dp"
+					        android:background="@drawable/gradient_slide" >
+
+					    </android.support.v4.view.ViewPager>
+					     
+					</LinearLayout>
+					
+			    	<ImageButton
+				        android:id="@+id/arrow_player_right"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_rigth"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"
+				    />
+			    
+			</LinearLayout>
+	    
+			<LinearLayout
+			    android:layout_width="0dip" 
+			    android:layout_height="wrap_content"
+			    android:layout_weight=".5"
+			    android:orientation="horizontal">
+				    
+			    <ImageButton
+				        android:id="@+id/arrow_computer_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_left"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+		  
+				    <LinearLayout
+				        android:id="@+id/linear_computer_choise"
+				        android:layout_height="wrap_content"
+				  		android:layout_width="wrap_content"
+				        android:orientation="vertical">
+				
+				        <TextView 
+					        android:id="@+id/txt_computer"
+					        android:layout_width="wrap_content"
+					        android:layout_height="match_parent"
+						    android:textSize="20sp"
+						    android:text="@string/computer"
+						    android:layout_gravity="center"
+						    android:textColor="@color/color_title"
+						    android:layout_marginTop="5dp"/>
+				        
+					    <android.support.v4.view.ViewPager 
+					        android:id="@+id/pagerComputer"
+					        android:layout_width="250dp"
+					        android:layout_height="80dp"
+					        android:padding="20dp"
+					        android:background="@drawable/gradient_slide">
+					    </android.support.v4.view.ViewPager>
+				    
+				  	</LinearLayout>
+				  	
+				    <ImageButton
+				        android:id="@+id/arrow_player_rigth"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_rigth"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+			    
+			</LinearLayout>    
+	 </LinearLayout>
+	
+	
+	
+	<!-- Choose Uniform -->
+		<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:padding="2dp">
+	    
+			<LinearLayout
+			    android:id="@+id/computer_content"
+			    android:layout_width="0dip" 
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:paddingLeft="7dp"
+			    android:layout_weight=".5">
+			    
+			    	<ImageButton
+				        android:id="@+id/arrow_player_uniform_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_left"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+			        
+				    <LinearLayout
+				        android:id="@+id/linear_player_uniform_choise"
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:orientation="vertical">
+				    
+				        <TextView 
+					        android:id="@+id/txt_player_uniform"
+					        android:layout_width="wrap_content"
+					        android:layout_height="match_parent"
+						    android:textSize="20sp"
+						    android:text="@string/uniform"
+						    android:layout_gravity="center"
+						    android:textColor="@color/color_title"
+						    android:layout_marginTop="5dp"/>
+				        
+					    <android.support.v4.view.ViewPager
+					        android:id="@+id/pager_player1_uniform"
+					        android:layout_width="250dp"
+					        android:layout_height="70dp"
+					        android:paddingTop="20dp"
+					        android:paddingLeft="10dp"
+					        android:background="@drawable/gradient_slide" >
+
+					    </android.support.v4.view.ViewPager>
+					     
+					</LinearLayout>
+					
+			    	<ImageButton
+				        android:id="@+id/arrow_player_uniform_right"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_rigth"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"
+				    />
+			    
+			</LinearLayout>
+	    
+			<LinearLayout
+			    android:layout_width="0dip" 
+			    android:layout_height="wrap_content"
+			    android:layout_weight=".5"
+			    android:orientation="horizontal">
+				    
+			    <ImageButton
+				        android:id="@+id/arrow_computer_uniform_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_left"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+		  
+				    <LinearLayout
+				        android:id="@+id/linear_computer_uniform_choise"
+				        android:layout_height="wrap_content"
+				  		android:layout_width="wrap_content"
+				        android:orientation="vertical">
+				
+				        <TextView
+				            android:id="@+id/txt_computer_uniform"
+				            android:layout_width="wrap_content"
+				            android:layout_height="match_parent"
+				            android:layout_gravity="center"
+				            android:layout_marginTop="5dp"
+				            android:text="@string/uniform"
+				            android:textColor="@color/color_title"
+				            android:textSize="20sp" />
+				        
+					    <android.support.v4.view.ViewPager 
+					        android:id="@+id/pager_computer_uniform"
+					        android:layout_width="250dp"
+					        android:layout_height="70dp"
+					        android:paddingTop="20dp"
+					        android:paddingLeft="10dp"
+					        android:background="@drawable/gradient_slide">
+					    </android.support.v4.view.ViewPager>
+				    
+				  	</LinearLayout>
+				  	
+				    <ImageButton
+				        android:id="@+id/arrow_computer_rigth"
+				        android:layout_width="wrap_content"
+				        android:layout_height="35dp"
+				        android:layout_gravity="center_vertical"
+					    android:src="@drawable/arrow_rigth"
+					    android:background="@android:color/transparent"
+					    android:layout_marginTop="15dp"/>
+			    
+			</LinearLayout>    
+	 </LinearLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+
+		<RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="10dp"
+		    android:padding="3dp"
+		    android:layout_gravity="center"
+		    
+		     >
+
+		    <Button
+		        android:id="@+id/bt_preference"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/bt_preference"
+		        android:textColor="@android:color/white"
+		        android:textSize="26sp"
+		        android:textStyle="bold"
+		        android:padding="10dp"
+				android:background="@drawable/bt_preference"/>
+		</RelativeLayout>
+
+    </LinearLayout>
+	
+</LinearLayout>
