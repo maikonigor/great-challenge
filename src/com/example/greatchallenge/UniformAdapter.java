@@ -1,5 +1,6 @@
 package com.example.greatchallenge;
 
+import bean.Country;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +16,7 @@ public class UniformAdapter extends PagerAdapter {
 	private FragmentManager fm;
 	private LayoutInflater mLayoutInflater;
 	private Context context;
+	private Country country;
 	
 	int resources[] = {
 			R.drawable.flag_02,
@@ -23,8 +25,9 @@ public class UniformAdapter extends PagerAdapter {
 			R.drawable.flag_02
 	};
 	
-	public UniformAdapter(Context c) {
+	public UniformAdapter(Context c, Country country) {
 		this.context = c;
+		this.country = country;
 		mLayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
@@ -64,3 +67,4 @@ public class UniformAdapter extends PagerAdapter {
 	
 	
 }
+

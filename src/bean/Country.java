@@ -4,10 +4,12 @@ public class Country {
 	
 	private int flag;
 	private String name;
+	private int tag;
 	
-	public Country(int flag, String name) {
+	public Country(int flag, String name, int tag) {
 		this.flag = flag;
 		this.name = name;
+		this.tag = tag;
 	}
 
 	public int getFlag() {
@@ -26,6 +28,11 @@ public class Country {
 		this.name = name;
 	}
 	
+	public void setTag(int tag) {
+		this.tag = tag;
+	}
 	
-
+	public int getTag() {
+		return tag;
+	}
 }

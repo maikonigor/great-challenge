@@ -17,23 +17,23 @@ class CustomPagerAdapter extends PagerAdapter {
     LayoutInflater mLayoutInflater;
     
     Country[] mResources = {
-    		new Country(0, null),
-	        new Country(R.drawable.flag_01, "Brazil"),
-	        new Country(R.drawable.flag_02, "Franch"),
-	        new Country(R.drawable.flag_03, "Netherland"),
-	        new Country(R.drawable.flag_04, "Germany"),
-	        new Country(R.drawable.flag_05, "Itay"),
-	        new Country(R.drawable.flag_06, "Dinamark"),
-	        new Country(R.drawable.flag_07, "Uruguai"),
-	        new Country(R.drawable.flag_08, "Grece"),
-	        new Country(R.drawable.flag_09, "Spain"),
-	        new Country(R.drawable.flag_10, "Croatia"),
-	        new Country(R.drawable.flag_11, "Country11"),
-	        new Country(R.drawable.flag_12, "Camaroes"),
-	        new Country(R.drawable.flag_13, "Japan"),
-	        new Country(R.drawable.flag_14, "Chile"),
-	        new Country(R.drawable.flag_15, "Australia"),
-	        new Country(0, null)
+    		new Country(0, null,0),
+	        new Country(R.drawable.flag_01, "Brazil",Constantes.BRAZIL),
+	        new Country(R.drawable.flag_02, "Franch",Constantes.FRANCH),
+	        new Country(R.drawable.flag_03, "Netherland",Constantes.NETHERLAND),
+	        new Country(R.drawable.flag_04, "Germany",Constantes.GERMANY),
+	        new Country(R.drawable.flag_05, "Itay",Constantes.ITALY),
+	        new Country(R.drawable.flag_06, "Dinamark",Constantes.DINAMARK),
+	        new Country(R.drawable.flag_07, "Uruguai",Constantes.URUGUAI),
+	        new Country(R.drawable.flag_08, "Grece",Constantes.GRECE),
+	        new Country(R.drawable.flag_09, "Spain",Constantes.SPAIN),
+	        new Country(R.drawable.flag_10, "Croatia",Constantes.CROATIA),
+	        new Country(R.drawable.flag_11, "Country11",Constantes.C11),
+	        new Country(R.drawable.flag_12, "Camaroes",Constantes.CAMAROES),
+	        new Country(R.drawable.flag_13, "Japan",Constantes.JAPAN),
+	        new Country(R.drawable.flag_14, "Chile",Constantes.CHILE),
+	        new Country(R.drawable.flag_15, "Australia",Constantes.AUSTRALIA),
+	        new Country(0, null,0)
 	};
  
     public CustomPagerAdapter(Context context) {
@@ -60,6 +60,7 @@ class CustomPagerAdapter extends PagerAdapter {
         TextView cname = (TextView) itemView.findViewById(R.id.cname);
         cflag.setImageResource(mResources[position].getFlag());
         cname.setText(mResources[position].getName());
+        cname.setTag(mResources[position].getTag());
  
         container.addView(itemView);
  

@@ -1,5 +1,6 @@
 package com.example.greatchallenge;
 
+import bean.Country;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Typeface;
@@ -58,7 +59,7 @@ public class MainActivity extends Activity {
 		fontArabolic = Typeface.createFromAsset(getApplicationContext().getAssets(), "font/"+Font.ARABOLIC);
 		
 		mCustomPagerAdapter = new CustomPagerAdapter(this);
-		uAdapter = new UniformAdapter(this);
+//		uAdapter = new UniformAdapter(this);
 		
 		
 		title = (TextView)findViewById(R.id.page_title);
@@ -116,8 +117,8 @@ public class MainActivity extends Activity {
 		
 		pagerComputerUniform = (ViewPager) findViewById(R.id.pager_computer_uniform);
 		
-		pagerPlayerUniform.setAdapter(uAdapter);
-		pagerComputerUniform.setAdapter(uAdapter);
+//		pagerPlayerUniform.setAdapter(uAdapter);
+//		pagerComputerUniform.setAdapter(uAdapter);
 		
 	}
 	
@@ -139,7 +140,34 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPageSelected(int position) {
-			System.out.println("Posicao: "+position);
+			View v = pagerPlayer1.getChildAt(position);
+			TextView cname = (TextView) v.findViewById(R.id.cname);
+			String name = cname.getText().toString();
+			int tag = (Integer) cname.getTag();
+			int res = 0;
+			
+			switch(position){
+				case 1 :  res = R.drawable.flag_01; break;
+				case 2 :  res = R.drawable.flag_02; break;
+				case 3 :  res = R.drawable.flag_03; break;
+				case 4 :  res = R.drawable.flag_04; break;
+				case 5 :  res = R.drawable.flag_05; break;
+				case 6 :  res = R.drawable.flag_06; break;
+				case 7 :  res = R.drawable.flag_07; break;
+				case 8 :  res = R.drawable.flag_08; break;
+				case 9 :  res = R.drawable.flag_09; break;
+				case 10 : res = R.drawable.flag_10; break;
+				case 11 : res = R.drawable.flag_11; break;
+				case 12 : res = R.drawable.flag_12; break;
+				case 13 : res = R.drawable.flag_13; break;
+				case 14 : res = R.drawable.flag_14; break;
+				case 15 : res = R.drawable.flag_15; break;
+			}
+			
+			Country c = new Country(res, name, tag);
+			uAdapter = new UniformAdapter(getApplicationContext(), c);
+			pagerPlayerUniform.setAdapter(uAdapter);
+			
 		}
 		
 	}
