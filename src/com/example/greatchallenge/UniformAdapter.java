@@ -17,10 +17,10 @@ public class UniformAdapter extends PagerAdapter {
 	private Context context;
 	
 	int resources[] = {
-			R.drawable.flag_01,
-			R.drawable.flag_01,
-			R.drawable.flag_01,
-			R.drawable.flag_01
+			R.drawable.flag_02,
+			R.drawable.flag_02,
+			R.drawable.flag_02,
+			R.drawable.flag_02
 	};
 	
 	public UniformAdapter(Context c) {

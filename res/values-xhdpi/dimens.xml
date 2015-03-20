@@ -24,6 +24,7 @@
     <dimen name="pager_uniform_height">70dp</dimen>
     <dimen name="pager_uniform_paddingTop">20dp</dimen>
     <dimen name="pager_uniform_paddingLeft">10dp</dimen>
+    <dimen name="page_width_ofset">0.35px</dimen>
     
     <dimen name="bt_preference_textSize">26sp</dimen>
     <dimen name="bt_preference_padding">10dp</dimen>

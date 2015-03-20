@@ -28,6 +28,8 @@ public class MainActivity extends Activity {
 	private TextView title;
 	private TextView tvPlayer;
 	private TextView tvComputer;
+	private TextView tvPlayerUniform;
+	private TextView tvComputerUniform;
 	
 	private ImageButton arrowPlayerLeft;
 	private ImageButton arrowPlayerRight;
@@ -68,6 +70,11 @@ public class MainActivity extends Activity {
 		tvComputer = (TextView)findViewById(R.id.txt_computer);
 		tvComputer.setTypeface(fontArabolic);
 		
+		tvPlayerUniform = (TextView) findViewById(R.id.txt_player_uniform);
+		tvPlayerUniform.setTypeface(fontArabolic);
+		tvComputerUniform = (TextView) findViewById(R.id.txt_computer_uniform);
+		tvComputerUniform.setTypeface(fontArabolic);
+		
 		btPreference = (Button) findViewById(R.id.bt_preference);
 		btPreference.setTypeface(fontArabolic);
 		
@@ -80,15 +87,18 @@ public class MainActivity extends Activity {
 		
 		pagerPlayer1 = (ViewPager) findViewById(R.id.pagerPlayer1);
 		pagerPlayer1.setAdapter(mCustomPagerAdapter);
-		pagerPlayer1.setOnPageChangeListener(new PageSelectedItem(pagerPlayer1));
+		pagerPlayer1.setOnPageChangeListener(new PageChanged());
+		pagerPlayer1.setPageTransformer(true, new ZoomOutPageTransformer());
 		
 		arrowComputerLeft = (ImageButton) findViewById(R.id.arrow_computer_left);
 		arrowComputerLeft.setOnClickListener(new ArrowComputerLeft());
 		
 		arrowComputerRigth = (ImageButton) findViewById(R.id.arrow_computer_rigth);
 		arrowComputerRigth.setOnClickListener(new ArrowComputerRight());
+		
 		pagerComputer = (ViewPager) findViewById(R.id.pagerComputer);
 		pagerComputer.setAdapter(mCustomPagerAdapter);
+		pagerComputer.setPageTransformer(true, new ZoomOutPageTransformer());
 		
 		arrowPlayerUniformLeft = (ImageButton) findViewById(R.id.arrow_player_uniform_left);
 		arrowPlayerUniformLeft.setOnClickListener(new ArrowUniformPlayerLeft());
@@ -97,11 +107,13 @@ public class MainActivity extends Activity {
 		arrowPlayerUniformRigth.setOnClickListener(new ArrowUniformPlayerRight());
 		
 		pagerPlayerUniform = (ViewPager) findViewById(R.id.pager_player1_uniform);
+		pagerPlayerUniform.setPageTransformer(true, new ZoomOutPageTransformer());
 		
 		arrowComputerUniformLeft = (ImageButton) findViewById(R.id.arrow_computer_uniform_left);
 		arrowComputerUniformLeft.setOnClickListener(new ArrowUniformComputerLeft());
 		arrowComputerUniformRigth = (ImageButton) findViewById(R.id.arrow_computer_uniform_rigth);
 		arrowComputerUniformRigth.setOnClickListener(new ArrowUniformComputerRight());
+		
 		pagerComputerUniform = (ViewPager) findViewById(R.id.pager_computer_uniform);
 		
 		pagerPlayerUniform.setAdapter(uAdapter);
@@ -109,16 +121,12 @@ public class MainActivity extends Activity {
 		
 	}
 	
-	private class PageSelectedItem implements OnPageChangeListener{
+	private class PageChanged implements OnPageChangeListener{
 		
-		private ViewPager pager;
 		
-		public PageSelectedItem(ViewPager pager){
-			this.pager = pager;
-		}
 
 		@Override
-		public void onPageScrollStateChanged(int position) {
+		public void onPageScrollStateChanged(int arg0) {
 			// TODO Auto-generated method stub
 			
 		}
@@ -131,22 +139,11 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPageSelected(int position) {
-			View v = pager.getChildAt(position);
-			if(v !=null ){
-				ImageView image = (ImageView) v.findViewById(R.id.cflag);
-				TextView text = (TextView) v.findViewById(R.id.cname);
-				text.setText(text.getText());
-				text.setTextColor(getResources().getColor(R.color.red));
-				int h = image.getLayoutParams().height;
-				int w = image.getLayoutParams().width;
-				image.getLayoutParams().width = w + 10;
-				image.getLayoutParams().height= h + 10;
-				
-			}
-			
+			System.out.println("Posicao: "+position);
 		}
 		
 	}
+	
 	
 	/* player1 left team*/
 	private class ArrowPlayerLeft implements OnClickListener{
@@ -208,6 +205,8 @@ public class MainActivity extends Activity {
 		}
 	}
 	
+	
+	
 	/**
 	 * Go to next position
 	 * @param pager
@@ -233,4 +232,5 @@ public class MainActivity extends Activity {
 			pager.setCurrentItem(item-1,true);
 	}
 }
+
 

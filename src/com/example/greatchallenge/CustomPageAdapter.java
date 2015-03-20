@@ -33,7 +33,7 @@ class CustomPagerAdapter extends PagerAdapter {
 	        new Country(R.drawable.flag_13, "Japan"),
 	        new Country(R.drawable.flag_14, "Chile"),
 	        new Country(R.drawable.flag_15, "Australia"),
-	        new Country(0, null),
+	        new Country(0, null)
 	};
  
     public CustomPagerAdapter(Context context) {
@@ -68,7 +68,7 @@ class CustomPagerAdapter extends PagerAdapter {
     @Override
     public float getPageWidth(int position) {
     	// TODO Auto-generated method stub
-    	return 0.35f;
+    	return mContext.getResources().getDimension(R.dimen.page_width_ofset);
     }
  
     @Override
