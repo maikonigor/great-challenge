@@ -18,11 +18,11 @@
 	        android:id="@+id/page_title"
 	        android:layout_width="fill_parent"
 	        android:layout_height="match_parent"
-		    android:textSize="35sp"
+		    android:textSize="@dimen/page_title"
 		    android:text="@string/choose_the_teams"
 		    android:gravity="center_horizontal"
 		    android:textColor="@color/color_title"
-		    android:layout_marginTop="5dp"
+		    android:layout_marginTop="@dimen/margin_page_title"
 		/>
 	    
 	    <LinearLayout
@@ -31,7 +31,7 @@
 		    android:layout_width="fill_parent"
 		    android:layout_height="20dp"
 		    android:background="@drawable/gradient_bar"
-		    android:layout_marginTop="10dp"
+		    android:layout_marginTop="@dimen/topbar_margin_top"
 		/>
 	    
 	</LinearLayout>
@@ -47,17 +47,17 @@
 			    android:layout_width="0dip" 
 			    android:layout_height="wrap_content"
 			    android:orientation="horizontal"
-			    android:paddingLeft="7dp"
+			    android:paddingLeft="@dimen/player_content_paddingLeft"
 			    android:layout_weight=".5">
 			    
 			    	<ImageButton
 				        android:id="@+id/arrow_player_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
 					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    android:layout_marginTop="@dimen/arrow_marginTop"/>
 			        
 				    <LinearLayout
 				        android:id="@+id/linear_player_choise"
@@ -69,17 +69,17 @@
 					        android:id="@+id/txt_player"
 					        android:layout_width="wrap_content"
 					        android:layout_height="match_parent"
-						    android:textSize="20sp"
+						    android:textSize="@dimen/txt_player_size"
 						    android:text="@string/player"
 						    android:layout_gravity="center"
 						    android:textColor="@color/color_title"
-						    android:layout_marginTop="5dp"/>
+						    android:layout_marginTop="@dimen/txt_player_marginTop"/>
 				        
 					    <android.support.v4.view.ViewPager
 					        android:id="@+id/pagerPlayer1"
-					        android:layout_width="250dp"
-					        android:layout_height="80dp"
-					        android:padding="20dp"
+					        android:layout_width="@dimen/pager_width"
+					        android:layout_height="@dimen/pager_height"
+					        android:padding="@dimen/pager_padding"
 					        android:background="@drawable/gradient_slide" >
 
 					    </android.support.v4.view.ViewPager>
@@ -89,11 +89,11 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_right"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
 					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"
+					    android:layout_marginTop="@dimen/arrow_marginTop"
 				    />
 			    
 			</LinearLayout>
@@ -107,11 +107,12 @@
 			    <ImageButton
 				        android:id="@+id/arrow_computer_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
+				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
 					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    />
 		  
 				    <LinearLayout
 				        android:id="@+id/linear_computer_choise"
@@ -123,17 +124,17 @@
 					        android:id="@+id/txt_computer"
 					        android:layout_width="wrap_content"
 					        android:layout_height="match_parent"
-						    android:textSize="20sp"
 						    android:text="@string/computer"
 						    android:layout_gravity="center"
 						    android:textColor="@color/color_title"
-						    android:layout_marginTop="5dp"/>
+						    android:textSize="@dimen/txt_computer_size"
+						    android:layout_marginTop="@dimen/txt_computer_marginTop"/>
 				        
 					    <android.support.v4.view.ViewPager 
 					        android:id="@+id/pagerComputer"
-					        android:layout_width="250dp"
-					        android:layout_height="80dp"
-					        android:padding="20dp"
+					        android:layout_width="@dimen/pager_width"
+					        android:layout_height="@dimen/pager_height"
+					        android:padding="@dimen/pager_padding"
 					        android:background="@drawable/gradient_slide">
 					    </android.support.v4.view.ViewPager>
 				    
@@ -142,11 +143,11 @@
 				    <ImageButton
 				        android:id="@+id/arrow_player_rigth"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
+				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
-					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    android:background="@android:color/transparent"/>
 			    
 			</LinearLayout>    
 	 </LinearLayout>
@@ -171,11 +172,11 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_uniform_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
+				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
-					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    android:background="@android:color/transparent"/>
 			        
 				    <LinearLayout
 				        android:id="@+id/linear_player_uniform_choise"
@@ -187,18 +188,18 @@
 					        android:id="@+id/txt_player_uniform"
 					        android:layout_width="wrap_content"
 					        android:layout_height="match_parent"
-						    android:textSize="20sp"
+						    android:textSize="@dimen/txt_player_size"
+						    android:layout_marginTop="@dimen/txt_player_marginTop"
 						    android:text="@string/uniform"
 						    android:layout_gravity="center"
-						    android:textColor="@color/color_title"
-						    android:layout_marginTop="5dp"/>
+						    android:textColor="@color/color_title"/>
 				        
 					    <android.support.v4.view.ViewPager
 					        android:id="@+id/pager_player1_uniform"
-					        android:layout_width="250dp"
-					        android:layout_height="70dp"
-					        android:paddingTop="20dp"
-					        android:paddingLeft="10dp"
+					        android:layout_width="@dimen/pager_width"
+					        android:layout_height="@dimen/pager_uniform_height"
+					        android:paddingTop="@dimen/pager_uniform_paddingTop"
+					        android:paddingLeft="@dimen/pager_uniform_paddingLeft"
 					        android:background="@drawable/gradient_slide" >
 
 					    </android.support.v4.view.ViewPager>
@@ -208,11 +209,11 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_uniform_right"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
+				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
 					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"
 				    />
 			    
 			</LinearLayout>
@@ -226,11 +227,11 @@
 			    <ImageButton
 				        android:id="@+id/arrow_computer_uniform_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
 					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    android:layout_marginTop="@dimen/arrow_marginTop"/>
 		  
 				    <LinearLayout
 				        android:id="@+id/linear_computer_uniform_choise"
@@ -243,17 +244,17 @@
 				            android:layout_width="wrap_content"
 				            android:layout_height="match_parent"
 				            android:layout_gravity="center"
-				            android:layout_marginTop="5dp"
 				            android:text="@string/uniform"
 				            android:textColor="@color/color_title"
-				            android:textSize="20sp" />
+				            android:layout_marginTop="@dimen/txt_player_marginTop"
+				            android:textSize="@dimen/txt_player_size" />
 				        
 					    <android.support.v4.view.ViewPager 
 					        android:id="@+id/pager_computer_uniform"
-					        android:layout_width="250dp"
-					        android:layout_height="70dp"
-					        android:paddingTop="20dp"
-					        android:paddingLeft="10dp"
+					        android:layout_width="@dimen/pager_width"
+					        android:layout_height="@dimen/pager_uniform_height"
+					        android:paddingTop="@dimen/pager_uniform_paddingTop"
+					        android:paddingLeft="@dimen/pager_uniform_paddingLeft"
 					        android:background="@drawable/gradient_slide">
 					    </android.support.v4.view.ViewPager>
 				    
@@ -262,21 +263,23 @@
 				    <ImageButton
 				        android:id="@+id/arrow_computer_rigth"
 				        android:layout_width="wrap_content"
-				        android:layout_height="35dp"
+				        android:layout_height="@dimen/arrow_height"
+				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
-					    android:background="@android:color/transparent"
-					    android:layout_marginTop="15dp"/>
+					    android:background="@android:color/transparent"/>
 			    
 			</LinearLayout>    
 	 </LinearLayout>
 
 	<LinearLayout
+	    android:id="@+id/preference_container"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="vertical">
 
 		<RelativeLayout
+		    android:id="@+id/layout_preference"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal"
@@ -293,9 +296,9 @@
 		        android:gravity="center"
 		        android:text="@string/bt_preference"
 		        android:textColor="@android:color/white"
-		        android:textSize="26sp"
+		        android:textSize="@dimen/bt_preference_textSize"
+		        android:padding="@dimen/bt_preference_padding"
 		        android:textStyle="bold"
-		        android:padding="10dp"
 				android:background="@drawable/bt_preference"/>
 		</RelativeLayout>
 
