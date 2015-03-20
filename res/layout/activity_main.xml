@@ -36,7 +36,9 @@
 	    
 	</LinearLayout>
 
+	<!-- Choose Team -->
 	<LinearLayout
+	    android:id="@+id/team_content"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="horizontal"
@@ -49,15 +51,17 @@
 			    android:orientation="horizontal"
 			    android:paddingLeft="@dimen/player_content_paddingLeft"
 			    android:layout_weight=".5">
-			    
-			    	<ImageButton
-				        android:id="@+id/arrow_player_left"
-				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
-				        android:layout_gravity="center_vertical"
-					    android:src="@drawable/arrow_left"
-					    android:background="@android:color/transparent"
-					    android:layout_marginTop="@dimen/arrow_marginTop"/>
+			    	
+				        
+		    	<ImageButton
+			        android:id="@+id/arrow_player_left"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:gravity="center"
+				    android:src="@drawable/arrow_left"
+				    android:background="@android:color/transparent"
+				    android:layout_marginTop="@dimen/arrow_marginTop"/>
+			    	
 			        
 				    <LinearLayout
 				        android:id="@+id/linear_player_choise"
@@ -79,7 +83,6 @@
 					        android:id="@+id/pagerPlayer1"
 					        android:layout_width="@dimen/pager_width"
 					        android:layout_height="@dimen/pager_height"
-					        android:padding="@dimen/pager_padding"
 					        android:background="@drawable/gradient_slide" >
 
 					    </android.support.v4.view.ViewPager>
@@ -89,7 +92,7 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_right"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
+				        android:layout_height="match_parent"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
 					    android:background="@android:color/transparent"
@@ -107,7 +110,7 @@
 			    <ImageButton
 				        android:id="@+id/arrow_computer_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
+				        android:layout_height="match_parent"
 				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
@@ -134,20 +137,19 @@
 					        android:id="@+id/pagerComputer"
 					        android:layout_width="@dimen/pager_width"
 					        android:layout_height="@dimen/pager_height"
-					        android:padding="@dimen/pager_padding"
 					        android:background="@drawable/gradient_slide">
 					    </android.support.v4.view.ViewPager>
 				    
 				  	</LinearLayout>
 				  	
 				    <ImageButton
-				        android:id="@+id/arrow_player_rigth"
+				        android:id="@+id/arrow_computer_rigth"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
-				        android:layout_marginTop="@dimen/arrow_marginTop"
+				        android:layout_height="match_parent"
 				        android:layout_gravity="center_vertical"
-					    android:src="@drawable/arrow_rigth"
-					    android:background="@android:color/transparent"/>
+				        android:layout_marginTop="@dimen/arrow_marginTop"
+				        android:background="@android:color/transparent"
+				        android:src="@drawable/arrow_rigth" />
 			    
 			</LinearLayout>    
 	 </LinearLayout>
@@ -172,7 +174,7 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_uniform_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
+				        android:layout_height="match_parent"
 				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
@@ -209,7 +211,7 @@
 			    	<ImageButton
 				        android:id="@+id/arrow_player_uniform_right"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
+				        android:layout_height="match_parent"
 				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_rigth"
@@ -227,7 +229,7 @@
 			    <ImageButton
 				        android:id="@+id/arrow_computer_uniform_left"
 				        android:layout_width="wrap_content"
-				        android:layout_height="@dimen/arrow_height"
+				        android:layout_height="match_parent"
 				        android:layout_gravity="center_vertical"
 					    android:src="@drawable/arrow_left"
 					    android:background="@android:color/transparent"
@@ -261,13 +263,13 @@
 				  	</LinearLayout>
 				  	
 				    <ImageButton
-				        android:id="@+id/arrow_computer_rigth"
+				        android:id="@+id/arrow_computer_uniform_rigth"
 				        android:layout_width="wrap_content"
 				        android:layout_height="@dimen/arrow_height"
-				        android:layout_marginTop="@dimen/arrow_marginTop"
 				        android:layout_gravity="center_vertical"
-					    android:src="@drawable/arrow_rigth"
-					    android:background="@android:color/transparent"/>
+				        android:layout_marginTop="@dimen/arrow_marginTop"
+				        android:background="@android:color/transparent"
+				        android:src="@drawable/arrow_rigth" />
 			    
 			</LinearLayout>    
 	 </LinearLayout>

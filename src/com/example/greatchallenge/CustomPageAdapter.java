@@ -52,7 +52,8 @@ class CustomPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
- 
+        
+        LinearLayout layout = (LinearLayout) itemView.findViewById(R.id.content_item);
         ImageView cflag = (ImageView) itemView.findViewById(R.id.cflag);
         TextView cname = (TextView) itemView.findViewById(R.id.cname);
         cflag.setImageResource(mResources[position].getFlag());
