@@ -134,9 +134,13 @@ public class MainActivity extends Activity {
 			View v = pager.getChildAt(position);
 			if(v !=null ){
 				ImageView image = (ImageView) v.findViewById(R.id.cflag);
+				TextView text = (TextView) v.findViewById(R.id.cname);
+				text.setText(text.getText());
+				text.setTextColor(getResources().getColor(R.color.red));
 				int h = image.getLayoutParams().height;
 				int w = image.getLayoutParams().width;
-				image.getLayoutParams().height = h+5;
+				image.getLayoutParams().width = w + 10;
+				image.getLayoutParams().height= h + 10;
 				
 			}
 			
@@ -210,10 +214,11 @@ public class MainActivity extends Activity {
 	 */
 	public void nextItem(ViewPager pager){
 		int item = pager.getCurrentItem();
+		int nextItem = item+1;
 		int count = pager.getChildCount();
 		
-//		if(item >=0 && item <count)
-			pager.setCurrentItem(item+1, true);
+		pager.setCurrentItem(nextItem, true);
+
 	}
 	
 	/**

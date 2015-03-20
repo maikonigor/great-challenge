@@ -17,9 +17,10 @@ class CustomPagerAdapter extends PagerAdapter {
     LayoutInflater mLayoutInflater;
     
     Country[] mResources = {
+    		new Country(0, null),
 	        new Country(R.drawable.flag_01, "Brazil"),
 	        new Country(R.drawable.flag_02, "Franch"),
-	        new Country(R.drawable.flag_03, "Italy"),
+	        new Country(R.drawable.flag_03, "Netherland"),
 	        new Country(R.drawable.flag_04, "Germany"),
 	        new Country(R.drawable.flag_05, "Itay"),
 	        new Country(R.drawable.flag_06, "Dinamark"),
@@ -30,8 +31,9 @@ class CustomPagerAdapter extends PagerAdapter {
 	        new Country(R.drawable.flag_11, "Country11"),
 	        new Country(R.drawable.flag_12, "Camaroes"),
 	        new Country(R.drawable.flag_13, "Japan"),
-	        new Country(R.drawable.flag_14, "Country14"),
-	        new Country(R.drawable.flag_15, "Australia")
+	        new Country(R.drawable.flag_14, "Chile"),
+	        new Country(R.drawable.flag_15, "Australia"),
+	        new Country(0, null),
 	};
  
     public CustomPagerAdapter(Context context) {
