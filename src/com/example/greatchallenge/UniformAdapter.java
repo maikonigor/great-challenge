@@ -18,22 +18,21 @@ public class UniformAdapter extends PagerAdapter {
 	private Context context;
 	private Country country;
 	
-	int resources[] = {
-			R.drawable.flag_02,
-			R.drawable.flag_02,
-			R.drawable.flag_02,
-			R.drawable.flag_02
-	};
+	int resources[];
 	
 	public UniformAdapter(Context c, Country country) {
 		this.context = c;
 		this.country = country;
 		mLayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		resources = new int[3];
+		
+		for(int i = 0; i<3; i++){
+			resources[i] = country.getFlag();
+		}
 	}
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return resources.length;
 	}
 

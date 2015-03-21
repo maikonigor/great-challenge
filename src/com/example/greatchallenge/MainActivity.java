@@ -88,7 +88,6 @@ public class MainActivity extends Activity {
 		
 		pagerPlayer1 = (ViewPager) findViewById(R.id.pagerPlayer1);
 		pagerPlayer1.setAdapter(mCustomPagerAdapter);
-		pagerPlayer1.setOnPageChangeListener(new PageChanged());
 		pagerPlayer1.setPageTransformer(true, new ZoomOutPageTransformer());
 		
 		arrowComputerLeft = (ImageButton) findViewById(R.id.arrow_computer_left);
@@ -117,33 +116,30 @@ public class MainActivity extends Activity {
 		
 		pagerComputerUniform = (ViewPager) findViewById(R.id.pager_computer_uniform);
 		
+		pagerPlayer1.setOnPageChangeListener(new PagePlayerChanged(pagerPlayerUniform,this,pagerPlayer1.getChildCount()));
+		pagerComputer.setOnPageChangeListener(new PagePlayerChanged(pagerComputerUniform,this,pagerPlayer1.getChildCount()));
+		
 //		pagerPlayerUniform.setAdapter(uAdapter);
 //		pagerComputerUniform.setAdapter(uAdapter);
 		
 	}
-	
-	private class PageChanged implements OnPageChangeListener{
-		
-		
+	/*
+	private class PagePlayerChanged implements OnPageChangeListener{
 
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
-			// TODO Auto-generated method stub
 			
 		}
 
 		@Override
 		public void onPageSelected(int position) {
-			View v = pagerPlayer1.getChildAt(position);
-			TextView cname = (TextView) v.findViewById(R.id.cname);
-			String name = cname.getText().toString();
-			int tag = (Integer) cname.getTag();
+			position +=1;
+			
 			int res = 0;
 			
 			switch(position){
@@ -164,14 +160,14 @@ public class MainActivity extends Activity {
 				case 15 : res = R.drawable.flag_15; break;
 			}
 			
-			Country c = new Country(res, name, tag);
+			Country c = new Country(res, "", 0);
 			uAdapter = new UniformAdapter(getApplicationContext(), c);
 			pagerPlayerUniform.setAdapter(uAdapter);
 			
 		}
 		
 	}
-	
+	*/
 	
 	/* player1 left team*/
 	private class ArrowPlayerLeft implements OnClickListener{
